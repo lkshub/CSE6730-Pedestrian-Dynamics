@@ -14,8 +14,3 @@ class Cell(object):
         print self.state
 
 
-FirstCell = Cell(1,1,1)
-FirstCell.display()
-FirstCell.UpdateDensity(1)
-FirstCell.UpdateState(1)
-FirstCell.display()

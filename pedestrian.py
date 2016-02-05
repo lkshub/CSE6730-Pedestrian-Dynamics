@@ -1,10 +1,6 @@
-xLength = 10000 #South-North length of the map
-yLength = 10000 #East-West length of the map
 
-def Density(map,x,y): 
-	pass
 
-class Pedestrain(object):
+class pedestrian(object):
 	def __init__(self,ID,x,y,destination,groupSize):
 		self.ID = ID
 		self.x = x	#coordinate x
@@ -23,15 +19,6 @@ class Pedestrain(object):
 	def walk(self):
 		pass
 
-CA = 3
-ins = Pedestrain(1,1,1,1,1)
-ins.exit(CA)
-CA = 4
-ins.exit(CA)
 
-# Initialize the CA model map
-CAMap = [[] for i in range(xLength)]
-for i in range(xLength):
-	for j in range(yLength):
-		CAMap[i].append(Cell(i,j,0))
+
 
