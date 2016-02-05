@@ -1,3 +1,5 @@
+xLength = 10000 #South-North length of the map
+yLength = 10000 #East-West length of the map
 
 def Density(map,x,y): 
 	pass
@@ -27,7 +29,9 @@ ins.exit(CA)
 CA = 4
 ins.exit(CA)
 
-CAMap = [[] for i in range(2000)]
-for i in range(2000):
-	for j in range(2000):
+# Initialize the CA model map
+CAMap = [[] for i in range(xLength)]
+for i in range(xLength):
+	for j in range(yLength):
 		CAMap[i].append(Cell(i,j,0))
+
