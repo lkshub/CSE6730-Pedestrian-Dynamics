@@ -1,0 +1,30 @@
+from Tkinter import *
+
+def InitMap():
+	win = Tk()
+	win.geometry('1024x1024')
+	win.title("CAModel")
+	timeFrame = Frame(win)
+	buttonFrame = Frame(win)
+	mapFrame = Frame(win)
+	label = Label(timeFrame,text="Time after end of game:  ",font = ('Helvetica',20),height=4).pack(side=LEFT)
+	clock = Label(timeFrame,text="00:00:00",font = ('Helvetica',20)).pack(side=RIGHT)
+
+	startButton = Button(buttonFrame,text="Start!",font = ('Helvetica',20),height=2).pack(side=LEFT)
+	pauseButton = Button(buttonFrame,text="Pause",font = ('Helvetica',20)).pack(side=LEFT)
+	conButton = Button(buttonFrame,text="Continue",font = ('Helvetica',20)).pack(side=LEFT)
+	clearButton = Button(buttonFrame,text="Clear All",font = ('Helvetica',20)).pack(side=LEFT)
+
+	timeFrame.pack()
+	buttonFrame.pack()
+
+	#maplabel = Label(mapFrame,text="map here").pack()
+
+	maps = Canvas(mapFrame,bg='grey',bd=10,height = 718,width=830)
+	for i in range(100):
+		maps.create_line(100,100,100+i,100,fill='red')
+	maps.pack()
+	mapFrame.pack()
+
+
+	win.mainloop()
